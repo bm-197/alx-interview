@@ -25,4 +25,3 @@ def pascal_triangle(n):
         triangle.append(tri)
 
     return triangle
-print(pascal_triangle(10))
