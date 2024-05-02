@@ -26,7 +26,8 @@ def canUnlockAll(boxes):
         if box not in visted:
             visted.add(box)
             for key in boxes[box]:
-                boxs.append(key)
+                if key not in visted:
+                    boxs.append(key)
 
     for i in range(len(boxes)):
         if i not in visted:
