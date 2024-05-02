@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 You have n number of locked boxes in front of you.
 Each box is numbered sequentially from 0 to n - 1 
@@ -34,4 +35,3 @@ def canUnlockAll(boxes):
             return False
     
     return True #all boxes are opened
-
