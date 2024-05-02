@@ -30,9 +30,5 @@ def canUnlockAll(boxes):
                 if key not in visted:
                     boxs.append(key)
 
-    for i in range(len(boxes)):
-        if i not in visted:
-            return False
-    
-    return True #all boxes are opened
+    return len(visted) == len(boxes)
 
