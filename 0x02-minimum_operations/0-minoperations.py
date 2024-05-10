@@ -12,8 +12,11 @@ def minOperations(n):
      the file.
      '''
     op = 0
-    for i in range(2, int((sqrt(n))) + 1):
-        while (n % i == 0):
+    n_tmp = n
+    for i in range(2, n):
+        while (n_tmp % i == 0):
             op += i
-            n /= i
+            n_tmp /= i
+        i+=1
     return op
+
