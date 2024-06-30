@@ -7,11 +7,11 @@ def validUTF8(data):
     """ Determines if a given data set represents a valid UTF-8 encoding.
     """
     num_bytes = 0
-    
+
     for byte in data:
         if type(byte) != int or byte < 0 or byte > 0x10ffff:
             return False
-        
+
         byte = byte & 0xFF
         if num_bytes == 0:
             # Determine the number of bytes in this UTF-8 character
@@ -28,5 +28,5 @@ def validUTF8(data):
             if (byte >> 6) != 0b10:
                 return False
             num_bytes -= 1
-    
+
     return num_bytes == 0
