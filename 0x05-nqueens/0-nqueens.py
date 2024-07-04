@@ -25,7 +25,7 @@ def print_solution(solution):
     for i in range(N):
         for j in range(N):
             if solution[i][j] == 'Q':
-                positions.append((i, j))
+                positions.append([i, j])
     print(positions)
 
 def is_safe(board, row, col):
@@ -46,23 +46,20 @@ def is_safe(board, row, col):
 def solve(board, col):
     if col >= N:
         solns.append([row[:] for row in board])
-        return True
+        return
 
-    res = False
     for i in range(N):
         if is_safe(board, i, col):
             board[i][col] = 'Q'
-            res = solve(board, col + 1) or res
+            solve(board, col + 1)
             board[i][col] = '.'
 
-    return res
+    return
 
-def solve_nqueens():
-    board = [['.' for _ in range(N)] for _ in range(N)]
-    solve(board, 0)
 
+board = [['.' for _ in range(N)] for _ in range(N)]
 solns = []
-solve_nqueens()
+solve(board, 0)
 
 for soln in solns:
     print_solution(soln)
