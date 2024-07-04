@@ -66,3 +66,4 @@ solve_nqueens()
 
 for soln in solns:
     print_solution(soln)
+
