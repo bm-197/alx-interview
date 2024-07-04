@@ -63,3 +63,4 @@ solve(board, 0)
 
 for soln in solns:
     print_solution(soln)
+
