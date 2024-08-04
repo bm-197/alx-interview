@@ -2,7 +2,7 @@
 """ Module For Island Perimeter."""
 
 
-def islandPerimeter(grid):
+def island_perimeter(grid):
     """ Island Perimeter Solver."""
     size = 0
     edges = 0
@@ -17,4 +17,3 @@ def islandPerimeter(grid):
                     edges += 1
 
     return size * 4 - edges * 2
-
